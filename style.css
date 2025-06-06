@@ -1,0 +1,924 @@
+/* Estilos gerais */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Cabeçalho */
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 84%;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+.scrolled #navbar {
+    background-color: #ffffff;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
+}
+
+#nav_logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ffbf00;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#nav_logo strong {
+    color: #ffbf00;
+}
+
+#nav_list {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: all 0.3s;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.nav-item a:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ffbf00;
+    transition: width 0.3s;
+}
+
+.nav-item a:hover:after, .nav-item.active a:after {
+    width: 100%;
+}
+
+.nav-item a:hover, .nav-item.active a {
+    color: #ffbf00;
+}
+
+#mobile_btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #333;
+}
+
+#mobile_menu {
+    display: none;
+    flex-direction: column;
+    background: #ffffff;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+}
+
+#mobile_menu.active {
+    display: flex;
+}
+
+#mobile_nav_list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+#mobile_nav_list li {
+    margin-bottom: 15px;
+}
+
+/* Banner */
+#banner {
+    height: 80vh;
+    background-image: url('https://images.pexels.com/photos/6694543/pexels-photo-6694543.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-top: 80px;
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.3) 100%);
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+}
+
+.banner-content {
+    max-width: 700px;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.banner-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 15px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.banner-content p {
+    font-size: 1.4em;
+    margin-bottom: 30px;
+    opacity: 0.9;
+    animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.btn-banner {
+    display: inline-block;
+    background-color: #ffbf00;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s;
+    animation: fadeInUp 1s ease-out 0.4s both;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.btn-banner:hover {
+    background-color: #e6a700;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+/* Botão Padrão */
+.btn-default {
+    background-color: #ffbf00;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.btn-default:hover {
+    background-color: #e6a700;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Seção Vantagens */
+#vantagens {
+    padding: 80px 8%;
+    background-color: #ffffff;
+}
+
+.vantagens-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 50px;
+}
+
+.vantagens-texto {
+    flex: 1;
+}
+
+.vantagens-texto h2 {
+    font-size: 2.2em;
+    color: #333;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.vantagens-texto h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 3px;
+    background-color: #ffbf00;
+}
+
+.vantagens-texto ul {
+    list-style: none;
+    padding: 0;
+}
+
+.vantagens-texto ul li {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    color: #555;
+    padding-left: 30px;
+    position: relative;
+}
+
+.vantagens-texto ul li:before {
+    content: '\f058';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: #ffbf00;
+}
+
+.vantagens-imagem {
+    flex: 1;
+}
+
+.vantagens-imagem img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    transition: transform 0.5s;
+}
+
+.vantagens-imagem img:hover {
+    transform: scale(1.03);
+}
+
+/* Seção Serviços */
+#servicos {
+    padding: 80px 8%;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#servicos h2 {
+    font-size: 2.5em;
+    margin-bottom: 50px;
+    color: #333;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+#servicos h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #ffbf00;
+}
+
+.servicos-lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.servico-item {
+    padding: 30px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.servico-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.servico-item i {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+}
+
+.servico-item:hover i {
+    transform: scale(1.2);
+}
+
+.servico-item h3 {
+    font-size: 1.4em;
+    margin: 15px 0;
+    font-weight: 600;
+}
+
+.servico-item p {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Cores dos serviços */
+.bg-amarelo {
+    background-color: #ffbf00;
+    color: #fff;
+}
+
+.bg-amarelo h3, .bg-amarelo p {
+    color: #fff;
+}
+
+.bg-branco {
+    background-color: #ffffff;
+    color: #333;
+    border: 1px solid #eee;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* Seção Contato */
+#contato {
+    padding: 80px 8%;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+#contato h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+#contato h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #ffbf00;
+}
+
+#contato p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.whatsapp-btn {
+    background-color: #25d366;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.whatsapp-btn i {
+    font-size: 1.3em;
+}
+
+.whatsapp-btn:hover {
+    background-color: #128c7e;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+/* Contato page */
+.contato-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+.crc-display {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 40px 0;
+    text-align: center;
+    border-left: 5px solid #ffbf00;
+}
+
+.crc-display i {
+    font-size: 2.5em;
+    color: #ffbf00;
+    margin-bottom: 15px;
+}
+
+.crc-display h3 {
+    font-size: 1.8em;
+    color: #333;
+    margin: 15px 0;
+}
+
+.crc-display p {
+    color: #666;
+    font-size: 1.1em;
+}
+
+.contato-botoes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 50px 0;
+}
+
+.botao-contato {
+    padding: 20px 30px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition: all 0.3s;
+    min-width: 200px;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.botao-contato:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.contato-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.info-item {
+    background-color: #fff;
+    padding: 40px 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    transition: all 0.3s;
+}
+
+.info-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.info-item i {
+    font-size: 3em;
+    color: #ffbf00;
+    margin-bottom: 20px;
+}
+
+.info-item h4 {
+    font-size: 1.5em;
+    color: #333;
+    margin: 15px 0;
+}
+
+.info-item p {
+    font-size: 1.1em;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Rodapé */
+footer {
+    padding: 60px 8% 30px;
+    background-color: #2c3e50;
+    color: #ffffff;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto 30px;
+}
+
+.footer-info h3, .footer-servicos h3 {
+    font-size: 1.5em;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-info h3:after, .footer-servicos h3:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: #ffbf00;
+}
+
+.footer-info ul, .footer-servicos ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-info ul li {
+    margin-bottom: 15px;
+}
+
+.footer-servicos ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.footer-servicos ul li {
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}
+
+.footer-info ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-info ul li a:hover {
+    color: #ffbf00;
+}
+
+.footer-info ul li a i {
+    width: 20px;
+    text-align: center;
+}
+
+.footer-crc {
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-crc p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9em;
+    color: #ffbf00;
+}
+
+footer > p {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    margin: 0;
+    font-size: 0.9em;
+    opacity: 0.7;
+}
+
+/* New styles for services section */
+.ver-mais-servicos {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.btn-servicos {
+    display: inline-block;
+    background-color: #ffbf00;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.btn-servicos:hover {
+    background-color: #e6a700;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Serviços Filter */
+.servicos-filtro {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.filtro-btn {
+    padding: 10px 20px;
+    border: 2px solid #ffbf00;
+    background: transparent;
+    color: #333;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 600;
+}
+
+.filtro-btn:hover,
+.filtro-btn.active {
+    background-color: #ffbf00;
+    color: #fff;
+}
+
+/* Sobre page styles */
+.sobre-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.crc-info {
+    margin-top: 20px;
+}
+
+.crc-badge-large {
+    background-color: #ffbf00;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1.1em;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.sobre-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.sobre-texto {
+    margin-bottom: 40px;
+}
+
+.sobre-texto p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.missao-valores {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+    margin: 60px 0;
+}
+
+.missao h3, .valores h3 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.missao h3:after, .valores h3:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: #ffbf00;
+}
+
+.missao p, .valores ul li {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #666;
+}
+
+.valores ul {
+    list-style: none;
+    padding: 0;
+}
+
+.valores ul li {
+    margin-bottom: 15px;
+    padding-left: 30px;
+    position: relative;
+}
+
+.valores ul li i {
+    position: absolute;
+    left: 0;
+    top: 2px;
+    color: #ffbf00;
+}
+
+.diferenciais {
+    margin-top: 60px;
+}
+
+.diferenciais h3 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 40px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.diferenciais h3:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #ffbf00;
+}
+
+.diferenciais-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.diferencial-item {
+    background-color: #f8f9fa;
+    padding: 30px 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s;
+    border-top: 4px solid #ffbf00;
+}
+
+.diferencial-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.diferencial-item i {
+    font-size: 2.5em;
+    color: #ffbf00;
+    margin-bottom: 20px;
+}
+
+.diferencial-item h4 {
+    font-size: 1.4em;
+    color: #333;
+    margin: 15px 0;
+}
+
+.diferencial-item p {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Animações */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .vantagens-container {
+        flex-direction: column;
+    }
+    
+    .vantagens-texto {
+        order: 1;
+    }
+    
+    .vantagens-imagem {
+        order: 2;
+        margin-top: 30px;
+    }
+    
+    .servicos-lista {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    #navbar {
+        padding: 15px 5%;
+        width: 90%;
+    }
+    
+    #nav_list, .btn-default {
+        display: none;
+    }
+
+    #mobile_btn {
+        display: block;
+    }
+    
+    .banner-content h1 {
+        font-size: 2.5em;
+    }
+    
+    .banner-content p {
+        font-size: 1.2em;
+    }
+    
+    .servicos-lista {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .contato-botoes {
+        flex-direction: column;
+    }
+    
+    .botao-contato {
+        width: 100%;
+    }
+    
+    #banner {
+        height: 60vh;
+    }
+    
+    .servicos-filtro {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filtro-btn {
+        width: 200px;
+    }
+
+    .missao-valores {
+        grid-template-columns: 1fr;
+    }
+
+    .diferenciais-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-content h1 {
+        font-size: 2em;
+    }
+    
+    .banner-content p {
+        font-size: 1em;
+    }
+    
+    .btn-banner {
+        padding: 12px 20px;
+        font-size: 1em;
+    }
+    
+    #servicos h2, #contato h2, .crc-info h2 {
+        font-size: 1.8em;
+    }
+    
+    .vantagens-texto h2 {
+        font-size: 1.8em;
+    }
+}
