@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Ericson Contabilidade</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        #nav_logo strong {
+            color: #FFD700; /* Amarelo ouro */
+        }
+
+        .botao-contato {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 16px;
+            border-radius: 5px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .botao-contato.whatsapp {
+            background-color: #25D366;
+        }
+
+        .botao-contato.instagram {
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+        }
+
+        .botao-contato.email {
+            background-color: #FFD700;
+            color: black;
+        }
+
+        .botao-contato:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="header" id="navbar">
+            <span id="nav_logo">
+                <i class="fas fa-calculator"></i>
+                <strong>Ericson Contabilidade</strong>
+            </span>
+            <ul id="nav_list">
+                <li class="nav-item"><a href="index.html">Início</a></li>
+                <li class="nav-item"><a href="sobre.html">Sobre Nós</a></li>
+                <li class="nav-item"><a href="servicos.html">Serviços</a></li>
+                <li class="nav-item active"><a href="contato.html">Contato</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="btn-default" onclick="redirectToWhatsApp('Olá, gostaria de entrar em contato')">Entre em contato conosco</button>
+                <button id="mobile_btn"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </nav>
+
+        <div id="mobile_menu">
+            <ul id="mobile_nav_list">
+                <li class="nav-item"><a href="index.html">Início</a></li>
+                <li class="nav-item"><a href="sobre.html">Sobre Nós</a></li>
+                <li class="nav-item"><a href="servicos.html">Serviços</a></li>
+                <li class="nav-item"><a href="contato.html">Contato</a></li>
+            </ul>
+            <button class="btn-default" onclick="redirectToWhatsApp('Olá, gostaria de entrar em contato')">Entre em contato conosco</button>
+        </div>
+    </header>
+
+    <section id="banner" class="contato-banner">
+        <div class="banner-overlay">
+            <div class="banner-content">
+                <h1>Entre em Contato</h1>
+                <p>Estamos prontos para atender suas necessidades</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato">
+        <div class="contato-container">
+            <h2>Fale Conosco</h2>
+            <p class="subtitulo">Escolha a melhor forma de entrar em contato:</p>
+
+            <div class="crc-display">
+                <i class="fas fa-certificate"></i>
+                <h3>CRC SP-357718/O-5</h3>
+                <p>Profissional contábil registrado no Conselho Regional de Contabilidade</p>
+            </div>
+
+            <div class="contato-botoes">
+                <a href="https://wa.me/5511991837551" target="_blank" class="botao-contato whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                </a>
+                <a href="https://instagram.com/seuinstagram" target="_blank" class="botao-contato instagram">
+                    <i class="fa-brands fa-instagram"></i> Instagram
+                </a>
+                <a href="mailto:lucasericson021@gmail.com" class="botao-contato email">
+                    <i class="fa-solid fa-envelope"></i> Enviar E-mail
+                </a>
+            </div>
+
+            <div class="contato-info">
+                <div class="info-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <h4>Telefone</h4>
+                    <p>(11) 99183-7551</p>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-map-marker-alt"></i>
+                    <h4>Endereço</h4>
+                    <p>Rua Giuseppe Marino, S/N<br> São Paulo - SP</p>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-clock"></i>
+                    <h4>Horário</h4>
+                    <p>Seg-Sex: 09h às 18h<br> Sábado: Fechado</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <h3>Contato</h3>
+                <ul>
+                    <li><a href="https://wa.me/5511991837551" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a></li>
+                    <li><a href="https://instagram.com/ericson_contabilidade" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                    <li><a href="mailto:lucasericson021@gmail.com"><i class="fa-solid fa-envelope"></i> lucasericson021@gmail.com</a></li>
+                </ul>
+                <p class="footer-crc"><i class="fas fa-certificate"></i> CRC SP-357718/O-5</p>
+            </div>
+            <div class="footer-servicos">
+                <h3>Nossos Serviços</h3>
+                <ul>
+                    <li>Abertura de Empresas</li>
+                    <li>Assessoria MEI</li>
+                    <li>Assessoria Contábil</li>
+                    <li>Assessoria Tributária</li>
+                    <li>Assessoria Trabalhista</li>
+                    <li>Emissão de Notas Fiscais</li>
+                    <li>Parcelamento em Geral</li>
+                    <li>Alterações de Contrato Societário</li>
+                    <li>Alterações de Endereço</li>
+                    <li>Alterações de Capital Social</li>
+                    <li>Alterações de E-mail</li>
+                    <li>Alterações de Telefone</li>
+                </ul>
+            </div>
+        </div>
+        <p class="footer-copy">&copy; 2025 Ericson Contabilidade. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function redirectToWhatsApp(message) {
+            const phoneNumber = "5511991837551";
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+            window.open(whatsappURL, '_blank');
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

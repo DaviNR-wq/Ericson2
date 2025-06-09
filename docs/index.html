@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ericson Contabilidade</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="vantagens.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <section class="header">
+            <nav id="navbar">
+                <span id="nav_logo">
+                    <i class="fas fa-calculator"></i>
+                    <strong>Ericson Contabilidade</strong>
+                </span>
+                <ul id="nav_list">
+                    <li class="nav-item active"><a href="index.html">Início</a></li>
+                    <li class="nav-item"><a href="sobre.html">Sobre Nós</a></li>
+                    <li class="nav-item"><a href="servicos.html">Serviços</a></li>
+                    <li class="nav-item"><a href="contato.html">Contato</a></li>
+                </ul>
+                <button class="btn-default" onclick="redirectToWhatsApp('Olá, gostaria de saber sobre os valores dos serviços')">Entre em contato conosco</button>
+                <button id="mobile_btn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </nav>
+            <div id="mobile_menu">
+                <ul id="mobile_nav_list">
+                    <li class="nav-item"><a href="index.html">Início</a></li>
+                    <li class="nav-item"><a href="sobre.html">Sobre Nós</a></li>
+                    <li class="nav-item"><a href="servicos.html">Serviços</a></li>
+                    <li class="nav-item"><a href="contato.html">Contato</a></li>
+                </ul>
+                <button class="btn-default" onclick="redirectToWhatsApp('Olá, gostaria de saber sobre os valores dos serviços')">Entre em contato conosco</button>
+            </div>
+        </section>
+    </header>
+
+    <!-- Banner com Imagem -->
+    <section id="banner">
+        <div class="banner-overlay">
+            <div class="banner-content">
+                <h1>Ericson Contabilidade</h1>
+                <p>Soluções contábeis personalizadas para o sucesso do seu negócio.</p>
+                <a href="#servicos" class="btn-banner">Conheça nossos serviços</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Vantagens -->
+    <section id="vantagens">
+        <div class="vantagens-container">
+            <div class="vantagens-texto">
+                <h2>Por que escolher a Ericson Contabilidade?</h2>
+                <ul>
+                    <li>Profissionais especializados e experientes.</li>
+                    <li>Atendimento personalizado para cada cliente.</li>
+                    <li>Soluções completas para sua empresa.</li>
+                    <li>Transparência e ética em todos os serviços.</li>
+                    <li>Preços competitivos e sem surpresas.</li>
+                    <li>Suporte rápido e eficiente.</li>
+                </ul>
+            </div>
+            <div class="vantagens-imagem">
+                <img src="https://images.pexels.com/photos/3943716/pexels-photo-3943716.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Profissional de contabilidade trabalhando">
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Serviços -->
+    <section id="servicos">
+        <h2>Nossos Serviços Principais</h2>
+        <div class="servicos-lista">
+            <div class="servico-item bg-amarelo" onclick="redirectToWhatsApp('Abertura de Empresas')">
+                <i class="fas fa-building"></i>
+                <h3>Abertura de Empresas</h3>
+                <p>Facilitamos todo o processo de abertura da sua empresa.</p>
+            </div>
+            <div class="servico-item bg-branco" onclick="redirectToWhatsApp('Assessoria MEI')">
+                <i class="fas fa-user-tie"></i>
+                <h3>Assessoria MEI</h3>
+                <p>Suporte completo para Microempreendedores Individuais.</p>
+            </div>
+            <div class="servico-item bg-amarelo" onclick="redirectToWhatsApp('Assessoria Contábil')">
+                <i class="fas fa-chart-line"></i>
+                <h3>Assessoria Contábil</h3>
+                <p>Planejamento financeiro e contábil para sua empresa.</p>
+            </div>
+            <div class="servico-item bg-branco" onclick="redirectToWhatsApp('Assessoria Tributária')">
+                <i class="fas fa-balance-scale"></i>
+                <h3>Assessoria Tributária</h3>
+                <p>Otimização de tributos e redução de custos.</p>
+            </div>
+        </div>
+        <div class="ver-mais-servicos">
+            <a href="servicos.html" class="btn-servicos">Ver Todos os Serviços</a>
+        </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contato">
+        <h2>Contato</h2>
+        <p>Entre em contato conosco:</p>
+        <a href="https://wa.me/5511991837551" class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i> Fale conosco no WhatsApp
+        </a>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <h3>Contato</h3>
+                <ul>
+                    <li><a href="https://wa.me/5511991837551" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a></li>
+                    <li><a href="https://instagram.com/ericson_contabilidade" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                    <li><a href="mailto:lucasericson021@gmail.com"><i class="fa-solid fa-envelope"></i> lucasericson021@gmail.com</a></li>
+                </ul>
+                <div class="footer-crc">
+                    <p><i class="fas fa-certificate"></i> CRC SP-357718/O-5</p>
+                </div>
+            </div>
+            <div class="footer-servicos">
+                <h3>Nossos Serviços</h3>
+                <ul>
+                    <li>Abertura de Empresas</li>
+                    <li>Assessoria MEI</li>
+                    <li>Assessoria Contábil</li>
+                    <li>Assessoria Tributária</li>
+                    <li>Assessoria Trabalhista</li>
+                    <li>Emissão de Notas Fiscais</li>
+                    <li>Parcelamento em Geral</li>
+                    <li>Alterações de Contrato Societário</li>
+                    <li>Alterações de Endereço</li>
+                    <li>Alterações de Capital Social</li>
+                    <li>Alterações de E-mail</li>
+                    <li>Alterações de Telefone</li>
+                </ul>
+            </div>
+        </div>
+        <p>&copy; 2025 Ericson Contabilidade. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function redirectToWhatsApp(service) {
+            const phoneNumber = "5511991837551";
+            const message = `Olá, gostaria de contratar o serviço de ${service}.`;
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+            window.open(whatsappURL, '_blank');
+        }
+    </script>
+</body>
+</html>
